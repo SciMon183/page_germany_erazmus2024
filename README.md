@@ -7,13 +7,6 @@ Welcome to the **Erasmus 2024** project! This web application aims to showcase a
 - [Features](#features)
 - [Technologies Used](#technologies-used)
 - [File Structure](#file-structure)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Future Enhancements](#future-enhancements)
-- [Contributing](#contributing)
-- [Acknowledgments](#acknowledgments)
-- [License](#license)
-- [Contact Information](#contact-information)
 
 ## Features
 
