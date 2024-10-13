@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erazmus 2024</title>
+    <!-- domyslny jasny styl strony --> 
+    <link id="themeStylesheet" rel="stylesheet" href="light.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="photo/ico.png" type="image/png">
+
+<!-- animacja zmiany stylu z jasny na ciemny  --> 
+
+    <style>
+        body {
+            opacity: 1;
+            transition: opacity 0.5s ease; 
+        }
+        body.fade-out {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <p> Explore German culture with me: the "Erasmus 2024" program! </p>
+    </div>    
+    <!-- Button section -->
+    <div class="buttons">
+        <!-- button one (Home) z ikoną domu -->
+        <button class="button" onclick="switchGallery(0)">
+            <i class="fas fa-home"></i> Home
+        </button>
+
+       <!-- button two (Practice) z ikoną książki -->
+        <div class="button button-2">
+            <i class="fas fa-book"></i> Practice
+            <div class="sub-buttons">
+                <!-- sub-button one (Week 1) z ikoną kalendarza -->
+                <button class="sub-button" onclick="switchGallery(1)">
+                    <i class="fas fa-calendar-week"></i> Week 1
+                </button>
+                <!-- sub-button two (Week 2) z ikoną kalendarza -->
+                <button class="sub-button" onclick="switchGallery(2)">
+                    <i class="fas fa-calendar-week"></i> Week 2
+                </button>
+                <!-- sub-button video alexa z ikoną video -->
+                <button class="sub-button" id="video-button" onclick="videoShow()">
+                    <i class="fas fa-video"></i> Video Alexa
+                </button>
+                <!-- sub-button video x z ikoną video -->
+                <button class="sub-button" id="video-buttonx" onclick="videoShowx()">
+                    <i class="fas fa-video"></i> Video SmartHome
+                </button>
+            </div>
+        </div>
+
+        <!-- button three (Culture) z ikoną globusa -->
+        <div class="button button-3">
+            <i class="fas fa-globe"></i> Culture
+            <div class="sub-buttons">
+                <!-- sub-button one (Berlin) z ikoną miasta -->
+                <button class="sub-button" onclick="switchGallery(3)">
+                    <i class="fas fa-city"></i> Berlin
+                </button>
+                <!-- sub-button two (Leipzig) z ikoną miasta -->
+                <button class="sub-button" onclick="switchGallery(4)">
+                    <i class="fas fa-city"></i> Leipzig
+                </button>
+                <!-- sub-button three (Schkeuditz) z ikoną miasta -->
+                <button class="sub-button" onclick="switchGallery(5)">
+                    <i class="fas fa-city"></i> Schkeuditz
+                </button>
+            </div>
+        </div>
+
+        <!-- button four (Free time) z ikoną zegara -->
+        <button class="button" onclick="switchGallery(6)">
+            <i class="fas fa-clock"></i> Free time
+        </button>
+        
+        <button class="button" id="dupa">
+            <i class="fas fa-moon" id="dupaa"></i> Toggle Theme
+        </button>
+    </div>
+
+        <!-- add vide alexa to the page --> 
+    <div id="videoContainer" style="display: none">
+        <video id="smart-home-video" class="video"  controls="">
+            <source src="week2/aa.mp4" type="video/mp4">
+            Your brouser dose not support the video tag
+        </video>
+    </div>
+
+            <!-- add vide SmartHome to the page --> 
+    <div id="videoContainerx" style="display: none">
+        <video id="smart-home-videox" class="video"  controls="">
+            <source src="week2/film.mp4" type="video/mp4">
+            Your brouser dose not support the video tag
+        </video>
+    </div>
+
+
+    <!-- Image and description section -->
+    <div class="image-container" id="image">
+
+        <button class="arrow arrow-left" id="arrow" onclick="prevImage()">&#10094;</button>
+
+        <img id="mainImage" src="main.jpeg" alt="Erasmus 2024 photo">
+
+        <div id="popup" class="popup">
+            <span id="closePopup" class="close-popup">&times;</span>
+            <img id="popupImage" src="path/to/main/image.jpg" alt="Popup Image" />
+        </div>
+
+        <button class="arrow arrow-right" id="arrowone" onclick="nextImage()">&#10095;</button>
+    </div>
+
+    <div class="description" id="imageDescription">
+        <!-- pedale jebany dodaj jakis op opis -->
+        We’re staying at the Vitalis center, where we live and complete our internships. 🏡 The center is located in Gut Wehlitz 2, 04435 Schkeuditz, providing a peaceful environment for both work and relaxation. 💼 It's the perfect setting to focus on gaining practical experience while enjoying comfortable accommodation. 🌿
+    </div>
+
+    <div id="thumbnailGallery" class="thumbnail-container">
+    <!-- Miniaturki zostaną tutaj wygenerowane -->
+    </div>
+  <footer>
+        <p>&copy; 2024 Designed by: Szymon Jagiełło
+        <a href="https://github.com/SciMon183" target="_blank" title="GitHub">
+        <i class="fab fa-github"></i>
+    </a>
+        </p>        
+    </footer>   
+     
+
+    <script src="script.js" async defer></script>
+
+</body>
+</html>
